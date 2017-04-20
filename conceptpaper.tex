@@ -6,14 +6,29 @@
 \section{INTRODUCTION}
 
 \section{BACKGROUND}	
-Our aim in this paper is to present and evaluate a logic that supports precisely this kind of reasoning. CATL (which stands for Counterfactual ATL, but it can be also read as Commitment ATL) is based on ATL, the Alternating-time Temporal Logic of Alur, Henzinger, and Kupferman [1, 2], a logic which supports reasoning about the abilities of agents and coalitions of agents in game-like multi-agent systems.\\\\ CATL extends ATL with ternary counterfactual commitment operators, of the form , with the intended reading “if it were the case that agent i committed to strategy , then ' would hold”. \\\\The operators are counterfactual because they involve a supposition (that agent i commits to following strategy ) which is not known to be true or false; we say they are commitment operators because they capture the notion of an agent committing to follow a particular strategy.1 A formula will be true in a state q of a system  is true at state  in the system, where is exactly like M except that agent i is only able to perform the actions dictated by strategy .
 
 
 \section{ LITERATURE REVIEW }
 \section{GOALS AND OBJECTIVES}	
+Our work makes three key contributions to the area of logics for multi-agent systems:
+\subsection{First}
+CATL is, to the best of our knowledge, the first logic 1Note that this is a rather different sense of the term commitment to that which is more commonly used in the multi-agent systems literature [16], in particular because commitment as represented in our counterfactual commitment operators is irrevocable.\\\\ We present our preliminary approach to a modal logic of revocable commitments
+in another paper [15].which combines reasoning about strategic ability with counterfactual
+reasoning.
+
+\subsection{Second}
+Although there has been previous work on logical characterisations of game-theoretic solution concepts, we believe that the combination of ability operators and the strategic counterfactual operator enables to express these properties much more elegantly and intuitively than has hitherto been possible.
+
+\subsection{Third}
+Our language extends ATL by introducing strategies as first-class components of the language, in much the same way that programs are first class components of the language of dynamic logic [12].\\\\ The resulting language not only enables one to reason about what coalitions can achieve, but also how they can achieve them. As we shall see in Section 4, the ability to name strategies explicitly within the language seems essential if we are to express properties such as Nash equilibrium.
+
+\section{RESEARCH SCOPE}
+In this paper, we did not include proofs of propositions and CATL properties due to lack of space.
 
 
 \section{METHODOLOGY AND TIMELINES}
+The remainder of the paper is structured as follows. 
+We begin by introducing Action-based Alternating Transition Systems (AATSs)  which are used to give a semantics to CATL. Next, we describe the formal syntax and semantics of CATL and show that the model checking problem for CATL is tractable (i.e., can be solved in deterministic polynomial time). \\\\To illustrate the power of the logic, we introduce a simple formal model of games, and show how CATL can be used to reason about such games. In particular, we define a notion of correspondence between games and models in the logic, and show how game-theoretic concepts such as dominated strategies, Pareto optimality, and Nash equilibrium can be expressed as formulas of CATL.\\\\ Finally, we present some conclusions. We don’t include proofs of propositions and CATL properties due to lack of space.
 
 \section{REFERENCES}
 
